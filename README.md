@@ -18,6 +18,10 @@ This project is an Angular application demonstrating how to manage products usin
 - RxJS for reactive programming
 - Bootstrap 5 for styling
 
+## Blog Post
+
+Check out my blog post on Medium [Effective State Management and Reactive Programming with Observables in Angular Using NgRx](https://medium.com/@bouguern.mohamed/effective-state-management-and-reactive-programming-with-observables-in-angular-using-ngrx-08880461e089) for a detailed explanation of how this application was built.
+
 ## Getting Started
 
 ### Prerequisites
