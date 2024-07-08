@@ -1,0 +1,55 @@
+<div class="container">
+    <h1 class="text-center h1 mb-5">Product Management</h1>
+  
+    <!-- Display loading and error messages -->
+    <div *ngIf="loading$ | async" class="loading">Loading...</div>
+    <div *ngIf="error$ | async as error" class="error">{{ error }}</div>
+  
+    <!-- Product Form -->
+    <form (ngSubmit)="onSubmit()">
+      <input type="hidden" [(ngModel)]="product.id" name="id" />
+      <div class="row g-3 align-items-center mb-3">
+        <div class="col-4">
+          <label for="productName" class="col-form-label">Product Name: </label>
+        </div>
+        <div class="col-auto">
+          <input type="text" [(ngModel)]="product.name" id="productName" name="productName" class="form-control" aria-describedby="passwordHelpInline" required>
+        </div>
+      </div>
+      <div class="row g-3 align-items-center mb-3">
+        <div class="col-4">
+          <label for="productPrice" class="col-form-label">Product Price: </label>
+        </div>
+        <div class="col-auto">
+          <input type="number" id="productPrice" [(ngModel)]="product.price" name="productPrice" class="form-control" aria-describedby="passwordHelpInline" required>
+        </div>
+      </div>
+      <div class="row g-3 align-items-center mb-5">
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary">Save Product</button>
+        </div>
+      </div>
+    </form>
+    <h2 class="h2 text-center">List of Products</h2>
+    <!-- Product List -->
+    <table class="table table-striped table-hover mb-5">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Product Price</th>
+          <th scope="col">Edit Product</th>
+          <th scope="col">Delete Product</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products$ | async">
+          <th scope="row">{{ product.id }}</th>
+          <td>{{ product.name }}</td>
+          <td>${{ product.price }}</td>
+          <td><button (click)="selectProduct(product.id)" class="btn btn-success">Edit</button></td>
+          <td><button (click)="deleteProduct(product.id!)" class="btn btn-danger">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

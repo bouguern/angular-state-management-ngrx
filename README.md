@@ -1,27 +1,36 @@
-# AngularStateManagementNgrx
+# Angular NgRx Product Management App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
+## Overview
 
-## Development server
+This project is an Angular application demonstrating how to manage products using NgRx for state management.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- Display a list of products with their names and prices.
+- Add new products to the list.
+- Update existing products.
+- Delete products from the list.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Used
 
-## Build
+- Angular 15
+- NgRx 15 for state management
+- RxJS for reactive programming
+- Bootstrap 5 for styling
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Getting Started
 
-## Running unit tests
+### Prerequisites
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Make sure you have Node.js and npm installed on your machine.
 
-## Running end-to-end tests
+### Installation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Clone the repository:
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+   ```bash
+   git clone https://github.com/bouguern/angular-state-management-ngrx.git
+   cd angular-state-management-ngrx
+   npm install
+   ng serve
+   ```
